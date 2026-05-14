@@ -39,23 +39,34 @@
 </head>
 
 <body class="index-page">
+  
 
   <header id="header" class="header d-flex flex-column justify-content-center">
+    <nav id="navmenu" class="navmenu">
+    <div class="language-switcher" aria-label="Language switcher">
+        <a href="#" class="lang-btn active" data-lang="en" aria-label="Switch to English" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('en'); return false;"><i class="bi bi-translate navicon" aria-hidden="true"></i><span>English</span></a>
+        <a href="#" class="lang-btn" data-lang="es" aria-label="Cambiar a español" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('es'); return false;"><i class="bi bi-globe-americas navicon" aria-hidden="true"></i><span>Español</span></a>
+    </div>
+    </nav>
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span data-i18n="nav_home">Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span data-i18n="nav_about">About</span></a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span data-i18n="nav_services">Services</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span data-i18n="nav_contact">Contact</span></a></li>
       </ul>
     </nav>
 
+
   </header>
 
+  
+
   <main class="main">
+ 
 
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
@@ -64,7 +75,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-8">
             <h2>LearnCraft Chile</h2>
-            <p>We Are <span class="typed" data-typed-items="Learning, Teaching, Students, Community"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <p><span data-i18n="hero_intro">We Are</span> <span class="typed" data-typed-en="Learning, Teaching, Students, Community" data-typed-es="Aprendizaje, Enseñanza, Estudiantes, Comunidad" data-typed-items="Learning, Teaching, Students, Community"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <a href="#"><i class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/learncraftchile/"><i class="bi bi-instagram"></i></a>
@@ -81,8 +92,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About Us</h2>
-        <p>At LearnCraft, we drive innovative educational experiences that connect technology, English, and meaningful learning.</p>
+        <h2 data-i18n="about_title">About Us</h2>
+        <p data-i18n="about_intro">At LearnCraft, we connect English, technology, and game-based learning to create high-impact digital educational experiences across Chile.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -92,17 +103,15 @@
             <img src="{% static 'core/img/Minecraft-Skins.png' %}" class="img-fluid" alt="Minecraft Education">
           </div>
           <div class="col-lg-8 content">
-            <h2>We Are LearnCraft</h2>
-            <p class="fst-italic py-3">
-              We are a team committed to transforming education in Chile through active methodologies, creativity, and digital tools with real impact in the classroom.
+            <h2 data-i18n="about_heading">We Are LearnCraft</h2>
+            <p class="fst-italic py-3" data-i18n="about_text_1">
+              We are a team committed to transforming education in Chile through game-based learning, creativity, and digital tools with real impact in the classroom.
             </p>
-            <p class="py-3">
-              We work alongside schools, teachers, and educational communities to design experiences that strengthen key skills such as English communication, collaboration, and problem-solving.
-              Our approach combines pedagogical innovation with close support to ensure that each implementation is relevant, motivating, and sustainable over time.
+            <p class="py-3" data-i18n="about_text_2">
+              LearnCraft is developed with the support of U.S. Funding and within the America 250 Celebration framework, promoting initiatives that strengthen innovation, international collaboration, and access to meaningful digital learning opportunities.
             </p>
-            <p>
-              In every project, we aim to inspire students and teachers to learn actively, build confidence, and discover new ways of teaching and learning.
-              More than a tool, we promote an educational culture centered on purpose, participation, and holistic development.
+            <p data-i18n="about_text_3">
+              Our purpose is to promote the development of the country through game-based learning, strengthening creativity, critical thinking, collaboration, and the professional use of digital tools inside the school environment. We support schools through a scalable model that allows them to experience the methodology and later replicate it within their own educational community.
             </p>
           </div>
         </div>
@@ -111,13 +120,58 @@
 
     </section><!-- /About Section -->
 
+      <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-journal-richtext"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-headset"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-people"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
      <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>We use Minecraft Education as a pedagogical tool to develop academic, social, and digital skills in real classroom contexts.</p>
+          <h2 data-i18n="services_title">Services</h2>
+          <p data-i18n="services_intro">We use Minecraft Education as a pedagogical tool to digitalize learning and develop academic, social, and digital skills in real classroom contexts.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -129,8 +183,8 @@
               <div class="icon">
                 <i class="bi bi-translate"></i>
               </div>
-              <h3>English Applied in Real Contexts</h3>
-              <p>With Minecraft Education, students use English to communicate, plan, and present ideas within collaborative projects, achieving active and meaningful learning.</p>
+              <h3 data-i18n="service_1_title">Minecraft Education Licenses and Classroom Implementation</h3>
+              <p data-i18n="service_1_text">Schools receive annual Minecraft Education licenses so teachers and students can work with structured game-based learning experiences that strengthen communication, creativity, and problem-solving.</p>
             </div>
           </div>
 
@@ -139,8 +193,8 @@
               <div class="icon">
                 <i class="bi bi-journal-text"></i>
               </div>
-              <h3>Integration with the School Curriculum</h3>
-              <p>It is used to connect English and other subject content with practical challenges, strengthening comprehension, creativity, and problem-solving in the classroom.</p>
+              <h3 data-i18n="service_2_title">Teacher Training and Official Resources</h3>
+              <p data-i18n="service_2_text">We provide teacher training in Minecraft Education together with the official workbook for educators, helping schools integrate English, technology, and curriculum goals into practical and motivating projects.</p>
             </div>
           </div>
 
@@ -149,8 +203,8 @@
               <div class="icon">
                 <i class="bi bi-bar-chart"></i>
               </div>
-              <h3>Participation, Teamwork, and Assessment</h3>
-              <p>It allows real-time progress tracking while students collaborate, make decisions, and develop key socio-emotional skills for their academic and personal future.</p>
+              <h3 data-i18n="service_3_title">Institutional Recognition and National Opportunities</h3>
+              <p data-i18n="service_3_text">Participating schools can access institutional certification for their commitment to educational innovation, regional workshops and webinars, and opportunities for teachers to join major in-person EdTech events in Santiago.</p>
             </div>
           </div>
 
@@ -167,8 +221,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>sin info</p>
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p data-i18n="contact_intro">We are available to connect with schools, teachers, and organizations interested in educational innovation.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -179,24 +233,24 @@
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
-                <h3>Address</h3>
-                <p>sin info</p>
+                <h3 data-i18n="contact_address_title">Address</h3>
+                <p data-i18n="contact_address_text">Information coming soon</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
-                <h3>Call Us</h3>
-                <p>sin info</p>
+                <h3 data-i18n="contact_call_title">Call Us</h3>
+                <p data-i18n="contact_call_text">Information coming soon</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
-                <h3>Email Us</h3>
-                <p>sin info</p>
+                <h3 data-i18n="contact_email_title">Email Us</h3>
+                <p data-i18n="contact_email_text">learncraftchile@gmail.com</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -207,27 +261,27 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" data-i18n-placeholder="form_name" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" data-i18n-placeholder="form_email" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" data-i18n-placeholder="form_subject" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" data-i18n-placeholder="form_message" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  <div class="loading" data-i18n="form_loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message" data-i18n="form_sent">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit" data-i18n="form_submit">Send Message</button>
                 </div>
 
               </div>
@@ -245,7 +299,7 @@
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
       <h3 class="sitename">LearnCraft</h3>
-      <p>sin info</p>
+      <p data-i18n="footer_text">English and technology for Chile through meaningful digital learning experiences.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/learncraftchile/"><i class="bi bi-instagram"></i></a>
@@ -253,7 +307,7 @@
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">LearnCraft</strong> <span>All Rights Reserved</span>
+          <span>Copyright</span> <strong class="px-1 sitename">LearnCraft</strong> <span data-i18n="footer_rights">All Rights Reserved</span>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -269,8 +323,7 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+
 
   <!-- Vendor JS Files -->
   <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -286,6 +339,137 @@
 
   <!-- Main JS File -->
   <script src="{% static 'core/js/main.js' %}"></script>
+
+  <script>
+    (function () {
+      const translations = {
+        en: {
+          nav_home: 'Home',
+          nav_about: 'About',
+          nav_services: 'Services',
+          nav_contact: 'Contact',
+          hero_intro: 'We Are',
+          about_title: 'About Us',
+          about_intro: 'At LearnCraft, we connect English, technology, and game-based learning to create high-impact digital educational experiences across Chile.',
+          about_heading: 'We Are LearnCraft',
+          about_text_1: 'We are a team committed to transforming education in Chile through game-based learning, creativity, and digital tools with real impact in the classroom.',
+          about_text_2: 'LearnCraft is developed with the support of U.S. Funding and within the America 250 Celebration framework, promoting initiatives that strengthen innovation, international collaboration, and access to meaningful digital learning opportunities.',
+          about_text_3: 'Our purpose is to promote the development of the country through game-based learning, strengthening creativity, critical thinking, collaboration, and the professional use of digital tools inside the school environment. We support schools through a scalable model that allows them to experience the methodology and later replicate it within their own educational community.',
+          services_title: 'Services',
+          services_intro: 'We use Minecraft Education as a pedagogical tool to digitalize learning and develop academic, social, and digital skills in real classroom contexts.',
+          service_1_title: 'Minecraft Education Licenses and Classroom Implementation',
+          service_1_text: 'Schools receive annual Minecraft Education licenses so teachers and students can work with structured game-based learning experiences that strengthen communication, creativity, and problem-solving.',
+          service_2_title: 'Teacher Training and Official Resources',
+          service_2_text: 'We provide teacher training in Minecraft Education together with the official workbook for educators, helping schools integrate English, technology, and curriculum goals into practical and motivating projects.',
+          service_3_title: 'Institutional Recognition and National Opportunities',
+          service_3_text: 'Participating schools can access institutional certification for their commitment to educational innovation, regional workshops and webinars, and opportunities for teachers to join major in-person EdTech events in Santiago.',
+          contact_title: 'Contact',
+          contact_intro: 'We are available to connect with schools, teachers, and organizations interested in educational innovation.',
+          contact_address_title: 'Address',
+          contact_address_text: 'Information coming soon',
+          contact_call_title: 'Call Us',
+          contact_call_text: 'Information coming soon',
+          contact_email_title: 'Email Us',
+          contact_email_text: 'learncraftchile@gmail.com',
+          form_name: 'Your Name',
+          form_email: 'Your Email',
+          form_subject: 'Subject',
+          form_message: 'Message',
+          form_loading: 'Loading',
+          form_sent: 'Your message has been sent. Thank you!',
+          form_submit: 'Send Message',
+          footer_text: 'English and technology for Chile through meaningful digital learning experiences.',
+          footer_rights: 'All Rights Reserved'
+        },
+        es: {
+          nav_home: 'Inicio',
+          nav_about: 'Nosotros',
+          nav_services: 'Servicios',
+          nav_contact: 'Contacto',
+          hero_intro: 'Somos',
+          about_title: 'Sobre Nosotros',
+          about_intro: 'En LearnCraft conectamos inglés, tecnología y game-based learning para crear experiencias educativas digitales de alto impacto en Chile.',
+          about_heading: 'Somos LearnCraft',
+          about_text_1: 'Somos un equipo comprometido con transformar la educación en Chile a través del aprendizaje basado en juegos, la creatividad y herramientas digitales con impacto real en la sala de clases.',
+          about_text_2: 'LearnCraft se desarrolla con el apoyo de U.S. Funding y en el marco de America 250 Celebration, impulsando iniciativas que fortalecen la innovación, la colaboración internacional y el acceso a oportunidades de aprendizaje digital significativas.',
+          about_text_3: 'Nuestro propósito es promover el desarrollo del país mediante el game-based learning, fortaleciendo la creatividad, el pensamiento crítico, el trabajo colaborativo y el uso profesional de herramientas digitales dentro del entorno escolar. Apoyamos a los colegios con un modelo escalable que les permite vivir la metodología y luego replicarla dentro de su comunidad educativa.',
+          services_title: 'Servicios',
+          services_intro: 'Usamos Minecraft Education como herramienta pedagógica para digitalizar el aprendizaje y desarrollar habilidades académicas, sociales y digitales en contextos reales de aula.',
+          service_1_title: 'Licencias de Minecraft Education e Implementación en Aula',
+          service_1_text: 'Los colegios reciben licencias anuales de Minecraft Education para que docentes y estudiantes trabajen con experiencias estructuradas de aprendizaje basado en juegos que fortalecen la comunicación, la creatividad y la resolución de problemas.',
+          service_2_title: 'Capacitación Docente y Recursos Oficiales',
+          service_2_text: 'Entregamos teacher training en Minecraft Education junto con el workbook oficial para profesores, ayudando a integrar inglés, tecnología y objetivos curriculares en proyectos prácticos y motivadores.',
+          service_3_title: 'Reconocimiento Institucional y Oportunidades Nacionales',
+          service_3_text: 'Los colegios participantes pueden acceder a certificación institucional por su compromiso con la innovación educativa, talleres regionales, webinars y oportunidades para que docentes participen en eventos EdTech presenciales en Santiago.',
+          contact_title: 'Contacto',
+          contact_intro: 'Estamos disponibles para conectar con colegios, docentes y organizaciones interesadas en innovación educativa.',
+          contact_address_title: 'Dirección',
+          contact_address_text: 'Información próximamente',
+          contact_call_title: 'Llámanos',
+          contact_call_text: 'Información próximamente',
+          contact_email_title: 'Escríbenos',
+          contact_email_text: 'learncraftchile@gmail.com',
+          form_name: 'Tu nombre',
+          form_email: 'Tu correo',
+          form_subject: 'Asunto',
+          form_message: 'Mensaje',
+          form_loading: 'Cargando',
+          form_sent: 'Tu mensaje fue enviado. Gracias.',
+          form_submit: 'Enviar mensaje',
+          footer_text: 'Inglés y tecnología para Chile a través de experiencias digitales de aprendizaje con sentido.',
+          footer_rights: 'Todos los derechos reservados'
+        }
+      };
+
+      const buttons = document.querySelectorAll('.lang-btn');
+      const translatableNodes = document.querySelectorAll('[data-i18n]');
+      const placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+      const typedNode = document.querySelector('.typed');
+
+      function setLanguage(language) {
+        const copy = translations[language] || translations.en;
+
+        document.documentElement.lang = language;
+        translatableNodes.forEach((node) => {
+          const key = node.dataset.i18n;
+          if (copy[key]) {
+            node.textContent = copy[key];
+          }
+        });
+
+        placeholderNodes.forEach((node) => {
+          const key = node.dataset.i18nPlaceholder;
+          if (copy[key]) {
+            node.setAttribute('placeholder', copy[key]);
+          }
+        });
+
+        if (typedNode) {
+          const typedItems = typedNode.getAttribute(`data-typed-${language}`) || typedNode.getAttribute('data-typed-en');
+          typedNode.setAttribute('data-typed-items', typedItems);
+        }
+
+        buttons.forEach((button) => {
+          button.classList.toggle('active', button.dataset.lang === language);
+        });
+
+        localStorage.setItem('learncraft-language', language);
+
+        if (window.learnCraftRefreshTyped) {
+          window.learnCraftRefreshTyped();
+        }
+      }
+
+      window.learnCraftSetLanguage = setLanguage;
+
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => setLanguage(button.dataset.lang));
+      });
+
+      const savedLanguage = localStorage.getItem('learncraft-language') || 'en';
+      setLanguage(savedLanguage);
+    })();
+  </script>
 
 </body>
 

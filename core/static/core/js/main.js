@@ -92,18 +92,35 @@
   /**
    * Init typed.js
    */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
+  let typedInstance;
+
+  function initTypedEffect() {
+    const selectTyped = document.querySelector('.typed');
+    if (!selectTyped) {
+      return;
+    }
+
+    if (typedInstance) {
+      typedInstance.destroy();
+    }
+
+    let typedStrings = selectTyped.getAttribute('data-typed-items');
+    if (!typedStrings) {
+      return;
+    }
+
+    typedStrings = typedStrings.split(',').map(item => item.trim());
+    typedInstance = new Typed('.typed', {
+      strings: typedStrings,
       loop: true,
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000
     });
   }
+
+  initTypedEffect();
+  window.learnCraftRefreshTyped = initTypedEffect;
 
   /**
    * Initiate Pure Counter
