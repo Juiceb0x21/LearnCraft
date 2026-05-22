@@ -39,26 +39,26 @@
 </head>
 
 <body class="index-page">
-  
-
   <header id="header" class="header d-flex flex-column justify-content-center">
-    <nav id="navmenu" class="navmenu">
-    <div class="language-switcher" aria-label="Language switcher">
-        <a href="#" class="lang-btn active" data-lang="en" aria-label="Switch to English" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('en'); return false;"><i class="bi bi-translate navicon" aria-hidden="true"></i><span>English</span></a>
-        <a href="#" class="lang-btn" data-lang="es" aria-label="Cambiar a español" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('es'); return false;"><i class="bi bi-globe-americas navicon" aria-hidden="true"></i><span>Español</span></a>
-    </div>
-    </nav>
 
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
-    <nav id="navmenu" class="navmenu">
+    <nav id="navmenu" class="navmenu navmenu-main">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span data-i18n="nav_home">Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span data-i18n="nav_about">About</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span data-i18n="nav_portfolio">Portfolio</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span data-i18n="nav_services">Services</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span data-i18n="nav_contact">Contact</span></a></li>
       </ul>
     </nav>
+
+    <nav class="navmenu navmenu-language" aria-label="Language menu">
+        <div class="language-switcher" aria-label="Language switcher">
+            <a href="#" class="lang-btn active" data-lang="en" aria-label="Switch to English" aria-pressed="true" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('en'); return false;"><i class="bi bi-translate navicon" aria-hidden="true"></i><span>English</span></a>
+            <a href="#" class="lang-btn" data-lang="es" aria-label="Cambiar a español" aria-pressed="false" onclick="window.learnCraftSetLanguage && window.learnCraftSetLanguage('es'); return false;"><i class="bi bi-globe-americas navicon" aria-hidden="true"></i><span>Español</span></a>
+        </div>
+      </nav>
 
 
   </header>
@@ -127,35 +127,33 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-emoji-smile"></i>
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-person"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <div class="stats-number">
+                + <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              </div>
+              <p data-i18n="stats_teachers">Teachers reached through our programs</p>
             </div>
           </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-journal-richtext"></i>
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center">
+            <i class="bi bi-building"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <div class="stats-number">
+                + <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>
+              </div>
+              <p data-i18n="stats_schools">Schools reached across Chile</p>
             </div>
           </div><!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
-            <i class="bi bi-headset"></i>
-            <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+          <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center">
             <i class="bi bi-people"></i>
             <div class="stats-item">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hard Workers</p>
+              <div class="stats-number">
+                + <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="1" class="purecounter"></span>
+              </div>
+              <p data-i18n="stats_students">Students reached and engaged</p>
             </div>
           </div><!-- End Stats Item -->
 
@@ -164,6 +162,115 @@
       </div>
 
     </section><!-- /Stats Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="portfolio_title">Portfolio</h2>
+        <p data-i18n="portfolio_intro">A small portfolio of our adventures and projects.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active" data-i18n="portfolio_filter_all">All</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'core/img/learncraft/learncraft-1.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Antofagasta</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-1.jpg' %}" title="LC Antofagasta" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'core/img/learncraft/learncraft-2.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Valparaiso</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-2.jpg' %}" title="LC Valparaiso" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'core/img/learncraft/learncraft-3.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Arica</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-3.jpg' %}" title="LC Arica" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'core/img/learncraft/learncraft-4.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Antofagasta</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-4.jpg' %}" title="LC Antofagasta" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'core/img/learncraft/learncraft-5.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Valparaiso</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-5.jpg' %}" title="LC Valparaiso" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'core/img/learncraft/learncraft-6.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Arica</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-6.jpg' %}" title="LC Arica" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="{% static 'core/img/learncraft/learncraft-7.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Valparaiso</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-7.jpg' %}" title="LC Valparaiso" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{% static 'core/img/learncraft/learncraft-8.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Antofagasta</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-8.jpg' %}" title="LC Antofagasta" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{% static 'core/img/learncraft/learncraft-9.jpg' %}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Arica</h4>
+                <p data-i18n="portfolio_item_caption">LearnCraft experience</p>
+                <a href="{% static 'core/img/learncraft/learncraft-9.jpg' %}" title="LC Arica" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
 
      <!-- Services Section -->
     <section id="services" class="services section">
@@ -257,7 +364,15 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="{% url 'contact_submit' %}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -327,7 +442,6 @@
 
   <!-- Vendor JS Files -->
   <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'core/vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'core/vendor/aos/aos.js' %}"></script>
   <script src="{% static 'core/vendor/typed.js/typed.umd.js' %}"></script>
   <script src="{% static 'core/vendor/purecounter/purecounter_vanilla.js' %}"></script>
@@ -346,6 +460,7 @@
         en: {
           nav_home: 'Home',
           nav_about: 'About',
+          nav_portfolio: 'Portfolio',
           nav_services: 'Services',
           nav_contact: 'Contact',
           hero_intro: 'We Are',
@@ -355,6 +470,14 @@
           about_text_1: 'We are a team committed to transforming education in Chile through game-based learning, creativity, and digital tools with real impact in the classroom.',
           about_text_2: 'LearnCraft is developed with the support of U.S. Funding and within the America 250 Celebration framework, promoting initiatives that strengthen innovation, international collaboration, and access to meaningful digital learning opportunities.',
           about_text_3: 'Our purpose is to promote the development of the country through game-based learning, strengthening creativity, critical thinking, collaboration, and the professional use of digital tools inside the school environment. We support schools through a scalable model that allows them to experience the methodology and later replicate it within their own educational community.',
+          stats_teachers: 'Teachers reached through our programs',
+          stats_schools: 'Schools reached across Chile',
+          stats_students: 'Students reached and engaged',
+          portfolio_title: 'Portfolio',
+          portfolio_intro: 'A small portfolio of our adventures and projects.',
+          portfolio_filter_all: 'All',
+          portfolio_item_caption: 'LearnCraft experience',
+          portfolio_more_details: 'More details',
           services_title: 'Services',
           services_intro: 'We use Minecraft Education as a pedagogical tool to digitalize learning and develop academic, social, and digital skills in real classroom contexts.',
           service_1_title: 'Minecraft Education Licenses and Classroom Implementation',
@@ -384,6 +507,7 @@
         es: {
           nav_home: 'Inicio',
           nav_about: 'Nosotros',
+          nav_portfolio: 'Portafolio',
           nav_services: 'Servicios',
           nav_contact: 'Contacto',
           hero_intro: 'Somos',
@@ -393,6 +517,14 @@
           about_text_1: 'Somos un equipo comprometido con transformar la educación en Chile a través del aprendizaje basado en juegos, la creatividad y herramientas digitales con impacto real en la sala de clases.',
           about_text_2: 'LearnCraft se desarrolla con el apoyo de U.S. Funding y en el marco de America 250 Celebration, impulsando iniciativas que fortalecen la innovación, la colaboración internacional y el acceso a oportunidades de aprendizaje digital significativas.',
           about_text_3: 'Nuestro propósito es promover el desarrollo del país mediante el game-based learning, fortaleciendo la creatividad, el pensamiento crítico, el trabajo colaborativo y el uso profesional de herramientas digitales dentro del entorno escolar. Apoyamos a los colegios con un modelo escalable que les permite vivir la metodología y luego replicarla dentro de su comunidad educativa.',
+          stats_teachers: 'Profesores alcanzados por nuestros programas',
+          stats_schools: 'Colegios alcanzados en Chile',
+          stats_students: 'Estudiantes alcanzados y comprometidos',
+          portfolio_title: 'Portafolio',
+          portfolio_intro: 'Un pequeño portafolio de nuestras aventuras y proyectos.',
+          portfolio_filter_all: 'Todas',
+          portfolio_item_caption: 'Experiencia LearnCraft',
+          portfolio_more_details: 'Mas detalles',
           services_title: 'Servicios',
           services_intro: 'Usamos Minecraft Education como herramienta pedagógica para digitalizar el aprendizaje y desarrollar habilidades académicas, sociales y digitales en contextos reales de aula.',
           service_1_title: 'Licencias de Minecraft Education e Implementación en Aula',
@@ -424,6 +556,7 @@
       const buttons = document.querySelectorAll('.lang-btn');
       const translatableNodes = document.querySelectorAll('[data-i18n]');
       const placeholderNodes = document.querySelectorAll('[data-i18n-placeholder]');
+      const titleNodes = document.querySelectorAll('[data-i18n-title]');
       const typedNode = document.querySelector('.typed');
 
       function setLanguage(language) {
@@ -444,13 +577,22 @@
           }
         });
 
+        titleNodes.forEach((node) => {
+          const key = node.dataset.i18nTitle;
+          if (copy[key]) {
+            node.setAttribute('title', copy[key]);
+          }
+        });
+
         if (typedNode) {
           const typedItems = typedNode.getAttribute(`data-typed-${language}`) || typedNode.getAttribute('data-typed-en');
           typedNode.setAttribute('data-typed-items', typedItems);
         }
 
         buttons.forEach((button) => {
-          button.classList.toggle('active', button.dataset.lang === language);
+          const isActive = button.dataset.lang === language;
+          button.classList.toggle('active', isActive);
+          button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
 
         localStorage.setItem('learncraft-language', language);

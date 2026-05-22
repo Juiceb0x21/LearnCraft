@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo mensaje de contacto</title>
+</head>
+<body style="margin:0;padding:0;background:#f3f6ff;font-family:Arial,Helvetica,sans-serif;color:#1a1f36;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f6ff;padding:24px 12px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="640" cellspacing="0" cellpadding="0" style="max-width:640px;background:#ffffff;border:1px solid #dbe5ff;border-radius:14px;overflow:hidden;">
+          <tr>
+            <td style="background:linear-gradient(135deg,#0046e5,#2f73ff);padding:18px 24px;color:#ffffff;">
+              <h1 style="margin:0;font-size:22px;line-height:1.25;">Nuevo mensaje de contacto</h1>
+              <p style="margin:6px 0 0 0;font-size:14px;opacity:0.95;">Formulario web LearnCraft Chile</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:22px 24px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+                <tr>
+                  <td style="padding:8px 0;font-size:14px;"><strong>Nombre:</strong> {{ sender_name }}</td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 0;font-size:14px;"><strong>Email:</strong> <a href="mailto:{{ sender_email }}" style="color:#0046e5;text-decoration:none;">{{ sender_email }}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding:8px 0 14px 0;font-size:14px;"><strong>Asunto:</strong> {{ subject }}</td>
+                </tr>
+                <tr>
+                  <td style="padding:0;">
+                    <div style="background:#f7f9ff;border:1px solid #dbe5ff;border-radius:10px;padding:14px;font-size:14px;line-height:1.55;white-space:pre-wrap;">{{ message }}</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:14px 24px 20px 24px;color:#6b738b;font-size:12px;border-top:1px solid #edf1ff;">
+              Este correo fue generado automaticamente desde el sitio de LearnCraft Chile.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

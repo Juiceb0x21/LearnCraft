@@ -112,62 +112,64 @@ body::after {
 
 .lang-btn {
   border: 0;
-  border-radius: 999px;
-  min-width: 50px;
-  padding: 8px 14px;
+  border-radius: 12px;
+  min-width: 64px;
+  padding: 8px 12px;
   font-family: var(--nav-font);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--heading-color);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: var(--nav-color);
   background: transparent;
-  transition: 0.25s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
 .lang-btn:hover {
-  color: var(--accent-color);
+  color: var(--heading-color);
+  background: color-mix(in srgb, var(--accent-color), white 90%);
 }
 
 .lang-btn.active {
   color: var(--contrast-color);
-  background: linear-gradient(135deg, var(--accent-color), #2f73ff);
-  box-shadow: 0 8px 20px rgba(0, 70, 229, 0.22);
+  background: var(--accent-color);
+  box-shadow: 0 6px 14px rgba(0, 70, 229, 0.22);
 }
 
 .language-switcher {
   position: static;
   z-index: 1;
   display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  margin-top: 2px;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  backdrop-filter: none;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0;
+  padding: 6px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 86%);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface-color), transparent 6%);
+  box-shadow: 0 10px 24px rgba(13, 27, 75, 0.08);
   pointer-events: auto;
 }
 
 .language-switcher .lang-btn {
   font-family: var(--nav-font);
+  font-weight: 400;
+  letter-spacing: normal;
   display: flex;
   align-items: center;
-  padding: 10px 18px;
-  margin-bottom: 8px;
+  justify-content: center;
+  padding: 8px 12px;
+  margin-bottom: 0;
   font-size: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 0;
-  height: 56px;
-  width: 140px;
-  overflow: hidden;
-  transition: 0.3s;
+  height: 44px;
+  width: 104px;
+  overflow: visible;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
   color: var(--nav-color);
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
+  background: transparent;
   box-shadow: none;
   pointer-events: auto;
 }
@@ -177,12 +179,12 @@ body::after {
 }
 
 .language-switcher .lang-btn span {
-  padding: 0 5px 0 7px;
+  padding: 0 0 0 7px;
 }
 
 .language-switcher .lang-btn:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--heading-color);
+  background: color-mix(in srgb, var(--accent-color), white 88%);
 }
 
 .language-switcher .lang-btn.active {
@@ -190,44 +192,41 @@ body::after {
   background: var(--accent-color);
 }
 
+.language-switcher .lang-btn:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent-color), white 20%);
+  outline-offset: 2px;
+}
+
 @media (min-width: 992px) {
   .language-switcher .lang-btn {
-    max-width: 56px;
-    justify-content: flex-start;
-  }
-
-  .language-switcher .lang-btn span {
-    display: none;
-  }
-
-  .language-switcher .lang-btn:hover,
-  .language-switcher .lang-btn.active {
-    max-width: 100%;
-    color: var(--contrast-color);
-  }
-
-  .language-switcher .lang-btn:hover span,
-  .language-switcher .lang-btn.active span {
-    display: block;
+    width: 104px;
   }
 }
 
 @media (max-width: 1199px) {
   .language-switcher {
-    margin-top: 2px;
+    margin-top: 0;
+    padding: 4px;
+    gap: 4px;
+  }
+
+  .language-switcher .lang-btn {
+    width: 94px;
+    height: 42px;
+    padding: 7px 10px;
   }
 }
 
 @media (max-width: 575px) {
   .language-switcher {
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   .language-switcher .lang-btn {
-    width: 120px;
-    height: 48px;
-    padding: 8px 14px;
-    font-size: 12px;
+    width: 90px;
+    height: 40px;
+    padding: 6px 10px;
+    font-size: 14px;
   }
 }
 
@@ -375,6 +374,25 @@ h6 {
   z-index: 9997;
 }
 
+.navmenu-main {
+  margin-bottom: 14px;
+}
+
+.navmenu-language {
+  position: relative;
+  padding-top: 14px;
+}
+
+.navmenu-language::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 4px;
+  width: 132px;
+  height: 1px;
+  background: color-mix(in srgb, var(--default-color), transparent 82%);
+}
+
 .navmenu ul {
   list-style: none;
   padding: 0 0 20px 0;
@@ -452,6 +470,16 @@ h6 {
 
   .navmenu-lang-btn span {
     display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navmenu-main {
+    margin-bottom: 10px;
+  }
+
+  .navmenu-language {
+    padding-top: 10px;
   }
 }
 
@@ -936,9 +964,16 @@ section:not(#hero)::before,
   z-index: 0;
 }
 
-.stats .stats-item span {
+.stats .stats-item .stats-number {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.stats .stats-item .stats-plus,
+.stats .stats-item .purecounter {
   font-size: 36px;
-  display: block;
   font-weight: 700;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }

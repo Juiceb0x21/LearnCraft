@@ -1,0 +1,8 @@
+Nuevo mensaje desde el formulario de contacto LearnCraft
+
+Nombre: {{ sender_name }}
+Email: {{ sender_email }}
+Asunto: {{ subject }}
+
+Mensaje:
+{{ message }}
